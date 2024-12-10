@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucid Dream Information Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            color: #333;
+            height: auto;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 580px;
+            background-image: url('how.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center top;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 1px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 2;
+        }
+
+        header .logo img {
+            height: 70px;
+            transition: all 0.3s ease;
+        }
+
+        header .logo img:hover {
+            transform: scale(1.1);
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 8px 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #ff0088;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: scale(1.1);
+        }
+
+        /* 자각몽 설명 콘텐츠 영역 */
+        .content {
+            padding: 40px 20px;
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #ff0088;
+        }
+
+        .content h3 {
+            font-size: 28px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            color: #ff0088;
+        }
+
+        /* 자각몽 장단점 카드 영역 */
+        .card-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1000px; /* 장단점 카드 너비를 1000px로 제한 */
+            margin: 0 auto; /* 중앙 배치 */
+        }
+
+        .card {
+            background-color: #222;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            width: 1000px; /* 장단점 카드 너비 480px로 설정 */
+            text-align: left;
+            margin: 10px;
+        }
+
+        .card h4 {
+            font-size: 24px;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .card ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .card ul li {
+            font-size: 16px;
+            color: #b1b1b1;
+            margin-bottom: 10px;
+        }
+
+        /* 자각몽 꾸는 방법 카드 영역 (기존 스타일 유지) */
+        .card-container-methods {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card-methods {
+            background-color: #222;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            width: 350px; /* 꿈을 꾸는 방법 카드 너비는 350px로 유지 */
+            text-align: left;
+            margin: 10px;
+        }
+
+        .card-methods h4 {
+            font-size: 24px;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .card-methods p {
+            font-size: 16px;
+            color: #b1b1b1;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3px 10px;
+            background-color: #000;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            font-size: 11px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+
+        footer p:last-child {
+            font-size: 11px;
+            color: #aaa;
+        }
+
+        footer .logo img {
+            height: 80px;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+
+        footer .logo img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <header>
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="Lucid Dream Logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="lucid.html">Lucid Dream</a></li>
+                    <li><a href="how.html">How</a></li>
+                    <li><a href="dont.html">Don't</a></li>
+                    <li><a href="art.html">Art</a></li>
+                    <li><a href="movie.html">Movie</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+    <!-- 자각몽 꾸는 방법 콘텐츠 -->
+    <section class="content">
+        
+        
+        <h2>자각몽을 꾸는 방법</h2>
+
+        <div class="card-container-methods">
+            <div class="card-methods">
+                <img src="diary.png" alt="">
+                <h4>꿈일기</h4>
+                <p>꿈일기는 자각몽을 경험하는 데 가장 기본적이고 중요한 방법 중 하나입니다. 매일 아침 일어나자마자 꿈을 기록하는 습관을 들이면, 꿈의 패턴이나 반복되는 요소들을 파악할 수 있게 됩니다.</p>
+            </div>
+
+            <div class="card-methods">
+                <img src="alarm.png" alt="">
+                <h4>꿈알람</h4>
+                <p>꿈알람은 자각몽을 유도하는 기법으로, 렘(REM) 수면 단계에 진입할 때마다 알람을 울리게 설정합니다. 알람을 통해 꿈을 꾸고 있다는 사실을 깨달을 수 있습니다.</p>
+            </div>
+
+            <div class="card-methods">
+                <img src="medicine.png" alt="">
+                <h4>보조영양제</h4>
+                <p>세로토닌과 관련된 보조영양제는 수면의 질을 향상시키고 꿈을 기억하는 데 도움을 줄 수 있습니다. 자각몽을 경험하려면 이런 보조영양제를 사용할 수 있습니다.</p>
+            </div>
+
+            <div class="card-methods">
+                <img src="mask.png" alt="">
+                <h4>자각몽 안대or 밴드</h4>
+                <p>자각몽 밴드나 안대는 꿈을 꾸는 동안 착용자가 꿈을 꾸고 있다는 사실을 인식하도록 도와줍니다. 신호를 통해 자각몽을 경험할 수 있습니다.</p>
+            </div>
+        </div>
+
+        <h3>자각몽을 꾸기전, 체크사항</h3>
+        <div class="card-container">
+            
+            <div class="card">
+                <h4>자각몽의 단점</h4>
+                <ul>
+                    <li>수면의 질 저하: 자각몽을 꾸려면 꿈을 자각하고 제어하는 능력이 필요하며, 이는 수면의 질을 저하시킬 수 있습니다.</li>
+                    <li>꿈의 혼란: 자각몽을 너무 자주 제어하려고 하면 꿈과 현실을 구분하기 어려워질 수 있습니다.</li>
+                    <li>과도한 정신적 피로: 자각몽을 너무 자주 시도하거나 꿈을 제어하려는 노력이 지나치면, 정신적으로 피로해질 수 있습니다. 꿈을 의도적으로 제어하려는 노력이 집중력을 요구하고, 이 과정에서 정신적 에너지를 소모하게 되면, 현실에서의 집중력이나 생산성에 영향을 미칠 수 있습니다.</li>
+                    <li>감정적인 스트레스: 자각몽에서 자주 나타나는 감정적 경험은 때로 스트레스를 유발할 수 있습니다. 예를 들어, 꿈에서의 불안, 두려움, 혼란스러운 상황이 현실에서의 감정에 영향을 미칠 수 있습니다. 또한 자각몽에서 꿈의 내용을 바꾸거나 제어하려는 시도가 실패할 경우 좌절감을 느낄 수 있습니다.</li>
+                    <li>자각몽을 위한 과도한 노력: 자각몽을 경험하려면 꾸준한 연습과 집중이 필요합니다. 그러나 이러한 노력 자체가 스트레스를 유발할 수 있으며, 꿈을 제어하려는 시도에서 오는 실패가 자존감을 낮추거나 좌절감을 일으킬 수 있습니다. 지속적인 시도는 오히려 꿈을 제대로 경험하지 못하게 만들 수도 있습니다.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Lucid Dream Logo"></a>
+        </div>
+        <p>Lucid dreaming is the ability to control your dreams while being aware of them. It offers benefits like enhanced creativity and problem-solving. 
+            <br>This website provides resources to help you explore and experience lucid dreaming.</p>
+        <p>&copy;KayWon Art University 22161052 Choi Minseok</p>
+    </footer>
+</body>
+</html>

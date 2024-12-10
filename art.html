@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucid Dream Artworks</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            color: #333;
+            height: auto;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 580px;
+            background-image: url('gallery.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center top;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 1px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 2;
+        }
+
+        header .logo img {
+            height: 70px;
+            transition: all 0.3s ease;
+        }
+
+        header .logo img:hover {
+            transform: scale(1.1);
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 8px 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #ff0088;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: scale(1.1);
+        }
+
+        /* 자각몽 작품 내용 */
+        .content {
+            padding: 40px 20px;
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #ff0088;
+        }
+
+        /* 카드 레이아웃 */
+        .artwork-container {
+            display: flex;
+            flex-direction: column; /* 한 줄에 하나씩 배치 */
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .artwork-card {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            width: 100%;
+            max-width: 900px; /* 카드 크기 더 크게 */
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .artwork-card img {
+            width: 100%;
+            height: 500px; /* 이미지 크기 확대 */
+            object-fit: cover; /* 이미지가 카드 영역에 맞게 잘리도록 설정 */
+        }
+
+        .artwork-description {
+            padding: 20px;
+            color: #b1b1b1;
+            text-align: left;
+        }
+
+        .artwork-description h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #ff0088;
+        }
+
+        .artwork-description h3 span {
+            color: #fff; /* 작품명 색상 흰색으로 변경 */
+        }
+
+        .artwork-description p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3px 10px;
+            background-color: #000;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            font-size: 11px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+
+        footer p:last-child {
+            font-size: 11px;
+            color: #aaa;
+        }
+
+        footer .logo img {
+            height: 80px;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+
+        footer .logo img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <header>
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="Lucid Dream Logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="lucid.html">Lucid Dream</a></li>
+                    <li><a href="how.html">How</a></li>
+                    <li><a href="dont.html">Don't</a></li>
+                    <li><a href="art.html">Art</a></li>
+                    <li><a href="movie.html">Movie</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+    <!-- 자각몽 관련 작품 소개 -->
+    <section class="content">
+        <h2>자각몽에 영향을 준 예술 작품들</h2>
+
+        <!-- 첫 번째 카드 -->
+        <div class="artwork-container">
+            <div class="artwork-card">
+                <img src="The Persistence of Memory.jpg" alt="The Persistence of Memory">
+                <div class="artwork-description">
+                    <h3>1. 살바도르 달리 (Salvador Dalí) <br><span>"기억의 지속" (The Persistence of Memory, 1931)</span></h3>
+                    <p><strong>특징:</strong> 달리는 꿈 속에서 현실의 규칙을 자유롭게 해석하고 왜곡하는 기법을 사용했습니다. "기억의 지속"에서 늘어지는 시계는 시간의 상대성, 즉 자각몽 상태에서 시간의 흐름을 왜곡하는 경험을 시각화한 것입니다. 달리는 꿈 속에서 시간을 어떻게 인식하는지, 그리고 물리적 세계의 법칙이 꿈에서 어떻게 바뀌는지를 탐구하고자 했습니다. 이 작품은 자각몽의 특징 중 하나인 꿈 속에서 느끼는 현실과 시간의 왜곡을 극적으로 표현한 예입니다.</p>
+                </div>
+            </div>
+
+            <!-- 두 번째 카드 -->
+            <div class="artwork-card">
+                <img src="The Elephant Celebes.jpg" alt="The Elephant Celebes">
+                <div class="artwork-description">
+                    <h3>2. 막스 에른스트 (Max Ernst) <br><span>"The Elephant Celebes" (1921)</span></h3>
+                    <p><strong>특징:</strong> 막스 에른스트는 자각몽의 비논리적인 이미지와 비현실적인 장면을 작품에 담기 위해 꿈의 세계를 시각화했습니다. "The Elephant Celebes"는 꿈의 세계에서 흔히 나타나는 기괴한 형태와 상황을 묘사하며, 현실과 꿈의 경계를 흐리게 만듭니다. 특히, 에른스트는 꿈 속에서 나타나는 기이한 이미지들—예를 들어, 말과 기계의 혼합체인 '코끼리'와 같은 요소—을 통해 자각몽의 세계에서 느끼는 불안과 초현실적 비유를 강조했습니다. 그는 무의식적 사고와 자각몽의 이미지를 결합하여 그 세계를 탐구하려 했습니다.</p>
+                </div>
+            </div>
+
+            <!-- 세 번째 카드 -->
+            <div class="artwork-card">
+                <img src="The Two Fridas.jpg" alt="The Two Fridas">
+                <div class="artwork-description">
+                    <h3>3. 프리다 칼로 (Frida Kahlo) <br><span>"The Two Fridas" (1939)</span></h3>
+                    <p><strong>특징:</strong> 프리다 칼로는 자아의 갈등을 표현하는 데 자각몽적 기법을 사용했습니다. "The Two Fridas"는 그녀의 두 가지 자아를 나타내는 이중 자아의 이미지를 묘사하며, 꿈에서 자신의 내면과 심리적 갈등을 탐구한 작품입니다. 칼로는 꿈 속에서 자주 자아와 대면하며, 자신을 둘로 분리해 심리적 갈등을 시각적으로 표현했습니다. 이 작품은 그녀의 자각몽을 통해 그녀의 정체성과 정신적 투쟁을 시각화한 예로, 꿈 속에서의 감정적 충돌을 실험한 결과입니다.</p>
+                </div>
+            </div>
+
+            <!-- 네 번째 카드 -->
+            <div class="artwork-card">
+                <img src="Le Voyage dans la Lune.jpg" alt="Le Voyage dans la Lune">
+                <div class="artwork-description">
+                    <h3>4. 조르주 메를로 (Georges Méliès) <br><span>"Le Voyage dans la Lune" (1902)</span></h3>
+                    <p><strong>특징:</strong> "Le Voyage dans la Lune"은 꿈과 현실을 넘나드는 상상력을 활용하여 초기 SF 영화의 기념비적인 작품이 되었습니다. 꿈 속에서 현실과 비현실을 자유롭게 넘나드는 장면들은 자각몽처럼 꿈의 세계와 현실을 자연스럽게 결합시킵니다. 영화에서 주인공들이 달로 여행을 떠나는 장면은 꿈처럼 비현실적이고 기발한 상상력을 담고 있으며, 현실의 물리법칙을 무시하는 방식으로 자각몽의 자유로움을 시각화했습니다.</p>
+                </div>
+            </div>
+
+            <!-- 다섯 번째 카드 -->
+            <div class="artwork-card">
+                <img src="The Bride Stripped Bare by Her Bachelors.jpg" alt="The Bride Stripped Bare by Her Bachelors">
+                <div class="artwork-description">
+                    <h3>5. 마르셀 뒤샹 (Marcel Duchamp) <br><span>"오귀스탱의 침대" (The Bride Stripped Bare by Her Bachelors, Even, 1915)</span></h3>
+                    <p><strong>특징:</strong> 마르셀 뒤샹은 자각몽에서 나타나는 무의식적인 이미지를 자신의 작품에 통합하여 심리적 갈등을 표현했습니다. "오귀스탱의 침대"에서 뒤샹은 꿈 속에서의 비현실적인 관계와 심리적 압박감을 묘사합니다. 이 작품은 꿈과 현실의 경계를 허물고, 감각적이고 혼란스러운 상황을 시각적으로 나타내어 관객이 무의식적으로 직면하도록 유도합니다. 자각몽을 활용하여 그는 감정적이고 정신적인 충돌을 묘사하며, 꿈 속에서의 복잡한 감정의 흐름과 상징적인 이미지를 작품에 담았습니다.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Lucid Dream Logo"></a>
+        </div>
+        <p>Lucid dreaming is the ability to control your dreams while being aware of them. It offers benefits like enhanced creativity and problem-solving. 
+            <br>This website provides resources to help you explore and experience lucid dreaming.</p>
+        <p>&copy;KayWon Art University 22161052 Choi Minseok</p>
+    </footer>
+</body>
+</html>
