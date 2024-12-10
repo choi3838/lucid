@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucid Dream Artworks</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            color: #333;
+            height: auto;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 580px;
+            background-image: url('movie.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center top;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 1px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 2;
+        }
+
+        header .logo img {
+            height: 70px;
+            transition: all 0.3s ease;
+        }
+
+        header .logo img:hover {
+            transform: scale(1.1);
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 8px 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #ff0088;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: scale(1.1);
+        }
+
+        /* 자각몽 영화 소개 */
+        .content {
+            padding: 40px 20px;
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #ff0088;
+        }
+
+        /* 카드 레이아웃 */
+        .artwork-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .artwork-card {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            width: 100%;
+            max-width: 600px;
+            margin: 15px;
+            text-align: center;
+            height: 900px; /* 카드 높이 900px로 설정 */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .artwork-card img {
+            width: 100%;
+            height: 60%; /* 이미지 높이를 60%로 설정 */
+            object-fit: contain; /* 이미지 비율을 유지하면서 이미지 전체가 보이도록 수정 */
+        }
+
+        .artwork-description {
+            padding: 20px;
+            color: #b1b1b1;
+            height: 40%; /* 설명 영역이 충분히 보이도록 높이 설정 */
+            overflow-y: auto; /* 내용이 넘치면 스크롤 되도록 설정 */
+        }
+
+        .artwork-description h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #ff0088;
+        }
+
+        .artwork-description h3 span {
+            color: #fff; /* 작품명 색상 흰색으로 변경 */
+        }
+
+        .artwork-description p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3px 10px;
+            background-color: #000;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            font-size: 11px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+
+        footer p:last-child {
+            font-size: 11px;
+            color: #aaa;
+        }
+
+        footer .logo img {
+            height: 80px;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+
+        footer .logo img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <header>
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="Lucid Dream Logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="lucid.html">Lucid Dream</a></li>
+                    <li><a href="how.html">How</a></li>
+                    <li><a href="dont.html">Don't</a></li>
+                    <li><a href="art.html">Art</a></li>
+                    <li><a href="movie.html">Movie</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+    <!-- 자각몽 관련 영화 소개 -->
+    <section class="content">
+        
+
+        <div class="artwork-container">
+            <div class="artwork-card">
+                <img src="movie1.jpg" alt="Inception Poster">
+                <div class="artwork-description">
+                    <h3>인셉션 (Inception, 2010) <br><span>감독: 크리스토퍼 놀란</span></h3>
+                    <p><strong>줄거리:</strong> 주인공 돔 코브는 '꿈 속에 들어가 사람들의 아이디어를 훔치는' 전문 도둑입니다. 하지만 이제는 그를 추적하는 이들이 많아지고, 자신의 가족을 다시 만날 수 있는 기회를 얻기 위해 한 마지막 작업을 맡게 됩니다. 그는 꿈 속에서 꿈을 꾸는 매우 복잡한 작업을 해야 하고, 이 과정에서 꿈과 현실의 경계가 점점 모호해지며 자각몽의 개념이 등장합니다.</p>
+                    <p><strong>자각몽의 요소:</strong> 영화의 핵심은 사람들이 꿈 속에서 자각몽을 경험하고 꿈을 조작할 수 있다는 점입니다. 꿈 속에서 또 다른 꿈을 꾸는 구조로, 꿈 안에서 꿈을 통제하거나 바꿀 수 있는 자각몽의 특징을 잘 보여줍니다.</p>
+                </div>
+            </div>
+
+            <div class="artwork-card">
+                <img src="movie2.jpg" alt="Lucid Dream Poster">
+                <div class="artwork-description">
+                    <h3>루시드 드림 (Lucid Dream, 2017) <br><span>감독: 김준석</span></h3>
+                    <p><strong>줄거리:</strong> 이 영화는 주인공이 자신의 꿈 속에서 자각몽을 이용해 현실의 사건을 추적하는 이야기입니다. 주인공은 자신의 아들이 실종된 사건을 풀기 위해, 자각몽을 통해 꿈 속에서 중요한 단서를 찾아 나섭니다. 꿈을 제어할 수 있다는 점을 이용해 점차 사건을 풀어가며, 현실과 꿈의 경계를 넘나드는 긴장감 넘치는 이야기를 그립니다.</p>
+                    <p><strong>자각몽의 요소:</strong> 이 영화는 자각몽의 개념을 적극적으로 다룹니다. 주인공은 꿈 속에서 자신이 꿈을 꾸고 있다는 것을 인식하고, 그 꿈을 자유롭게 조작할 수 있다는 점에서 자각몽의 특징을 잘 보여줍니다.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Lucid Dream Logo"></a>
+        </div>
+        <p>Lucid dreaming is the ability to control your dreams while being aware of them. It offers benefits like enhanced creativity and problem-solving. 
+            <br>This website provides resources to help you explore and experience lucid dreaming.</p>
+        <p>&copy;KayWon Art University 22161052 Choi Minseok</p>
+    </footer>
+</body>
+</html>

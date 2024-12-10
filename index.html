@@ -1,0 +1,142 @@
+<!DOCTYPE html> 
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucid Dream Information Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            height: 100vh;
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-image: url('main.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.6); /* 검정색 배경, 불투명도 60% */
+            padding: 1px 40px;  /* 높이 줄이기 */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 2;
+            max-width: 100%;
+        }
+
+        header .logo img {
+            height: 70px; /* 로고 크기 줄이기 */
+            transition: all 0.3s ease; /* 로고에 부드러운 전환 효과 추가 */
+        }
+
+        /* 헤더 로고 호버 효과 (그림자 제거) */
+        header .logo img:hover {
+            transform: scale(1.1); /* 로고가 마우스를 올리면 크기 증가 */
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 8px 10px;
+            border-radius: 5px; /* 모서리를 둥글게 */
+            transition: all 0.3s ease; /* 부드러운 전환 효과 */
+        }
+
+        /* Hover 효과 추가 */
+        header nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* 배경색 변화 */
+            color: #ff0088; /* 텍스트 색상 변화 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+            transform: scale(1.1); /* 크기 살짝 증가 */
+        }
+
+        footer {
+            text-align: center;
+            padding: 3px 10px; /* 푸터 높이 줄이기 */
+            background-color: #000; /* 배경색을 검정으로 설정 */
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 그림자 효과 추가 */
+        }
+
+        footer p {
+            font-size: 11px; /* 푸터 글자 크기 줄이기 */
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+
+        footer p:last-child {
+            font-size: 11px; /* 푸터 글자 크기 줄이기 */
+            color: #aaa;
+        }
+
+        footer .logo img {
+            height: 80px; /* 푸터 로고 크기 줄이기 */
+            margin-top: 10px;
+            transition: all 0.3s ease; /* 로고에 부드러운 전환 효과 추가 */
+        }
+
+        footer .logo img:hover {
+            transform: scale(1.1); /* 로고가 마우스를 올리면 크기 증가 */
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <header>
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="Lucid Dream Logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="lucid.html">Lucid Dream</a></li>
+                    <li><a href="how.html">How</a></li>
+                    <li><a href="dont.html">Don't</a></li>
+                    <li><a href="art.html">Art</a></li>
+                    <li><a href="movie.html">Movie</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+    <footer>
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Lucid Dream Logo"></a>
+        </div>
+        <p>Lucid dreaming is the ability to control your dreams while being aware of them. It offers benefits like enhanced creativity and problem-solving. 
+            <br>This website provides resources to help you explore and experience lucid dreaming.</p>
+        <p>&copy;KayWon Art University 22161052 Choi Minseok</p>
+    </footer>
+</body>
+</html>
